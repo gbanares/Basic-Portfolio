@@ -1,3 +1,17 @@
+/*  
+   * Teal color (used for headings and backgrounds): `#4aaaa5`
+   * Regular font color (used for paragraphs and all text besides the headings): `#777777`
+   * Main header background color: `#ffffff`
+   * Main header border color: `#cccccc`
+   * Footer background color: `#666666`
+   * Main content background color: `#ffffff`
+   * Main content border color: `#dddddd`
+
+   * For heading fonts use `font-family: 'Georgia', Times, Times New Roman, serif;`.
+   * For all other fonts use `'Arial', 'Helvetica Neue', Helvetica, sans-serif;`.
+*/
+
+
 html {
 	position: relative;
 }
@@ -5,19 +19,26 @@ html, body {
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 	color: #777777;
 	background-color: #efefef;
-	background: #efefef url("../images/5989640298695169161.jpg");
+	background: #ffffff url("../images/5989640298695169161.jpg");
 }
 
 header {
 	width: 100%;
 	height: auto;
 	border-bottom: 2px solid #cccccc;
-	background-color: #ffffff;
+    background-color: #ffffff;
+
 }
 
 header .container {
 	width: 960px;
-	margin: 0 auto;
+  margin: 0 auto;
+
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .logo {
@@ -43,6 +64,7 @@ header .container {
 	color: #b1adb3;
     font-weight: normal;
     float:right;
+
 }
 
 .menunav ul li {
@@ -59,11 +81,12 @@ header .container {
 }
 
 .menunav ul li a:hover {
-	color: #4aaaa5;
+    color: #ffb67d;
+    font-weight: bold;
 }
 
 .menunav ul li a.active {
-	color: #000000;
+    color: #000000;
 }
 
 .menunav ul li+li {
@@ -74,7 +97,7 @@ header .container {
 .content {
 	width: 960px;
 	clear: both;
-	margin: 0 auto 6em auto;
+    margin: 0 auto 6em auto;
 }
 
 .main {
@@ -85,10 +108,72 @@ header .container {
 	background-color: #ffffff;
 	border: 1px solid #dddddd;
 }
-
-headshot {
-	float: left;
-	
-	width: 200px;
-	height: 200px;
+h1 {
+    color: #4aaaa5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+div.maintxt {
+    line-height: 2em;
+}
+img {
+    float:left;
+	width: 200px;
+    height: 200px;
+    padding: 2px;
+    margin: 0 20px 20px 0 ;
+}
+
+footer { 
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 0px 20px 0px;
+    background-color:#666666;
+    color: #efefef;
+    border-top: 5px solid #4aaaa5;
+ 
+}
+
+/* Contact Page - see examples on W3schools.com */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4aaaa5;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #585858;
+}
+
+/* Portfolio Page */
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.3%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
